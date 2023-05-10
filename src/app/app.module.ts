@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { HomeComponent } from './components/home/home.component';
+import { CreateComponent } from './components/create/create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     AuthComponent,
-    HomeComponent
+    HomeComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

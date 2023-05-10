@@ -62,7 +62,7 @@ button {
     background-color: black;
     color: greenyellow;
     border: 0.25vw solid greenyellow;
-    border-radius: 3vw;
+    border-radius: 1.5vw;
     font-size: 2vw;
     display: flex;
     align-items: center;
@@ -89,18 +89,32 @@ form {
     justify-content: space-between;
     align-items: center;
     gap: 0.5vw;
-    margin: 10vw 0 1vw 0 ;
+    margin: 5vw 0 1vw 0 ;
 }
 
 input {
     width: 20.5vw;
     height: 3vw;
     font-size: 2vw;
-    border-radius: 3vw;
+    border-radius: 1.5vw;
     border: 0.25vw solid greenyellow;
     background-color: black;
     color: greenyellow;
     text-align: center;
+    outline: none;
+}
+
+textarea {
+    border: 0.25vw solid greenyellow;
+    border-radius: 1.5vw;
+    resize: none;
+    background-color: black;
+    width: 20.5vw;
+    outline: none;
+    color: greenyellow;
+    font-size: 2vw;
+    text-align: center;
+    height: 16vw;
 }
 
 .buttonsWrapper {
@@ -114,4 +128,8 @@ section {
     flex-direction: column;
     align-items: center;
     width: 100vw;
+}
+
+.create {
+    width: 20.5vw;
 }
