@@ -23,7 +23,7 @@ export class AuthComponent {
                     localStorage.setItem("username", Object.values(data)[1])
                     localStorage.setItem("accessToken", Object.values(data)[2])
 
-                    this.router.navigate(["/"])
+                    this.router.navigate(["/posts"])
                 }
             })
         }
@@ -37,7 +37,7 @@ export class AuthComponent {
                     localStorage.setItem("username", Object.values(data)[1])
                     localStorage.setItem("accessToken", Object.values(data)[2])
 
-                    this.router.navigate(["/"])
+                    this.router.navigate(["/posts"])
                 }
             })
         }

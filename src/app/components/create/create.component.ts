@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { take } from 'rxjs';
 import { PostService } from 'src/app/services/post.service';
 
@@ -11,17 +12,17 @@ import { PostService } from 'src/app/services/post.service';
 export class CreateComponent {
 	@ViewChild(NgForm, { static: true }) form!: ElementRef<HTMLInputElement>
 
-	constructor(private postService: PostService) {}
+	constructor(private postService: PostService, private router: Router) {}
 
 	handleSave(form: NgForm) {
 		if (!form.invalid) {
+			this.postService.createPost(form.value).pipe(take(1)).subscribe({
+				next: () => this.router.navigate(["/posts"])
+			})
 		}
-		this.postService.createPost(form.value).pipe(take(1)).subscribe({
-			next: post => console.log(post)
-		})
 	}
 
 	handleCancel() {
-		
+		this.router.navigate(["/posts"])
 	}
 }

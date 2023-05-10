@@ -133,3 +133,21 @@ section {
 .create {
     width: 20.5vw;
 }
+
+.postCard {
+    border: 0.25vw solid greenyellow;
+    width: 50vw;
+    border-radius: 1.5vw;
+    font-size: 2vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.25vw 0;
+}
+
+.postCard:hover {
+    cursor: pointer;
+    background-color: greenyellow;
+    color: black;
+}

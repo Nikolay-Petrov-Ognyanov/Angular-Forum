@@ -9,6 +9,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { HomeComponent } from './components/home/home.component';
 import { CreateComponent } from './components/create/create.component';
+import { CardComponent } from './components/card/card.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CreateComponent } from './components/create/create.component';
     NavComponent,
     AuthComponent,
     HomeComponent,
-    CreateComponent
+    CreateComponent,
+    CardComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

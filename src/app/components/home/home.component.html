@@ -1,3 +1,6 @@
 <section>
     <button routerLink="/create" class="create">Create new post</button>
+
+    <app-card *ngFor="let post of posts$ | async" (click)="handlePostCardClick(post._id)" [post]="post"></app-card>
+
 </section>
