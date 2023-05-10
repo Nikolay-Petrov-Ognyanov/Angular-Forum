@@ -1,0 +1,21 @@
+<section>
+    <form #form="ngForm">
+        <input type="text" name="username" ngModel #username="ngModel" required minlength="2">
+        <input type="password" name="password" ngModel #password="ngModel" required minlength="5">
+
+        <div class="buttonsWrapper" *ngIf="!form.invalid">
+            <button (click)="handleRegister(form)">Register</button>
+            <button (click)="handleLogin(form)">Login</button>
+        </div>
+    </form>
+
+    <ng-container *ngIf="username.touched">
+        <p class="error" *ngIf="username.errors?.['required']">Username is required</p>
+        <p class="error" *ngIf="username.errors?.['minlength']">Username must be at least 2 characters long</p>
+    </ng-container>
+
+    <ng-container *ngIf="password.touched">
+        <p class="error" *ngIf="password.errors?.['required']">Password is required</p>
+        <p class="error" *ngIf="password.errors?.['minlength']">Password must be at least 5 characters long</p>
+    </ng-container>
+</section>

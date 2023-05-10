@@ -1,0 +1,7 @@
+<nav>
+    <button routerLink="/">Home</button>
+
+    <button routerLink="/auth" *ngIf="!accessToken">Sign in</button>
+
+    <button (click)="handleLogout()" *ngIf="accessToken">Sign out</button>
+</nav>
