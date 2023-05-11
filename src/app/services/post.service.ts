@@ -25,4 +25,8 @@ export class PostService {
 	updatePost(postId: string, formValue: NgForm) {
 		return this.http.put(`http://localhost:3030/posts/${postId}`, formValue)
 	}
+
+	deletePost(postId: string) {
+		return this.http.delete(`http://localhost:3030/posts/${postId}`)
+	}
 }

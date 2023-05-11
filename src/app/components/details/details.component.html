@@ -15,7 +15,7 @@
         
         <div class="buttonsWrapper" *ngIf="userId && post?.authorId === userId">
             <button (click)="handleUpdate(post._id)">Update</button>
-            <button (click)="handleDelete()">Delete</button>
+            <button (click)="handleDelete(post._id)">Delete</button>
         </div>
     </div>
 

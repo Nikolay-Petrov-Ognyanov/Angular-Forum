@@ -33,7 +33,12 @@ export class DetailsComponent {
 		this.router.navigate([`/posts/${postId}/update`])
 	}
 
-	handleDelete() {
-		
+	handleDelete(postId: string) {
+		if (confirm(`Are you sure you want to delete ${this.post.title}?`)) {
+			this.postService.deletePost(postId).pipe(take(1)).subscribe({
+				next: () => this.router.navigate(["/posts"]),
+				error: error => console.error(error)
+			})
+		}
 	}
 }
