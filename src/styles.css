@@ -34,7 +34,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    color: greenyellow;
+    color: orange;
     background-color: black;
     display: flex;
 }
@@ -60,8 +60,8 @@ button {
     width: 12vw;
     height: 3vw;
     background-color: black;
-    color: greenyellow;
-    border: 0.25vw solid greenyellow;
+    color: orange;
+    border: 0.25vw solid orange;
     border-radius: 1.5vw;
     font-size: 2vw;
     display: flex;
@@ -74,7 +74,7 @@ button {
 button:hover {
     cursor: pointer;
     color: black;
-    background-color: greenyellow;
+    background-color: orange;
 }
 
 nav {
@@ -90,7 +90,7 @@ form {
     justify-content: space-between;
     align-items: center;
     gap: 0.5vw;
-    margin: 5vw 0 1vw 0 ;
+    margin: 5vw 0 1vw 0;
 }
 
 input {
@@ -98,21 +98,21 @@ input {
     height: 3vw;
     font-size: 2vw;
     border-radius: 1.5vw;
-    border: 0.25vw solid greenyellow;
+    border: 0.25vw solid orange;
     background-color: black;
-    color: greenyellow;
+    color: orange;
     text-align: center;
     outline: none;
 }
 
 textarea {
-    border: 0.25vw solid greenyellow;
+    border: 0.25vw solid orange;
     border-radius: 1.5vw;
     resize: none;
     background-color: black;
     width: 25vw;
     outline: none;
-    color: greenyellow;
+    color: orange;
     font-size: 2vw;
     text-align: center;
     height: 16vw;
@@ -136,7 +136,7 @@ section {
 }
 
 .postCard {
-    border: 0.25vw solid greenyellow;
+    border: 0.25vw solid orange;
     width: 50vw;
     border-radius: 1.5vw;
     font-size: 2vw;
@@ -149,12 +149,12 @@ section {
 
 .postCard:hover {
     cursor: pointer;
-    background-color: greenyellow;
+    background-color: orange;
     color: black;
 }
 
-.postWrapper{
-    border: 0.25vw solid greenyellow;
+.postWrapper {
+    border: 0.25vw solid orange;
     width: 50vw;
     border-radius: 1.5vw;
     display: flex;

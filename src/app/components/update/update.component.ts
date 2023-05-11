@@ -29,7 +29,7 @@ export class UpdateComponent {
 	}
 
 	handleSave(form: NgForm) {
-		let formValue = {
+		const formValue = {
 			title: form.value.title.trim() || this.post.title,
 			content: form.value.content.trim() || this.post.content
 		}
@@ -40,6 +40,6 @@ export class UpdateComponent {
 	}
 
 	handleCancel() {
-		this.router.navigate(["/posts"])
+		this.router.navigate([`/posts/${this.postId}`])
 	}
 }
