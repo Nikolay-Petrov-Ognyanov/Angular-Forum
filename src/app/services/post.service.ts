@@ -18,7 +18,11 @@ export class PostService {
 		return this.http.get("http://localhost:3030/posts")
 	}
 
-	readPost(id: string) {
-		return this.http.get(`http://localhost:3030/posts/${id}`)
+	readPost(postId: string) {
+		return this.http.get(`http://localhost:3030/posts/${postId}`)
+	}
+
+	updatePost(postId: string, formValue: NgForm) {
+		return this.http.put(`http://localhost:3030/posts/${postId}`, formValue)
 	}
 }

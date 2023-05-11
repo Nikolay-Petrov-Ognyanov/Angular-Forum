@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { take } from 'rxjs';
 import { PostService } from 'src/app/services/post.service';
 
@@ -9,21 +9,31 @@ import { PostService } from 'src/app/services/post.service';
 	styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
-	id: any
+	postId: any
 	post: any
 
 	constructor(
 		private postService: PostService,
-		private route: ActivatedRoute
+		private route: ActivatedRoute,
+		private router: Router
 	) {
-		this.id = this.route.snapshot.paramMap.get("id")
+		this.postId = this.route.snapshot.paramMap.get("postId")
 
-		this.postService.readPost(this.id).pipe(take(1)).subscribe({
-			next: post => this.post = post
+		this.postService.readPost(this.postId).pipe(take(1)).subscribe({
+			next: post => this.post = post,
+			error: error => console.error(error)
 		})
 	}
 
 	get userId() {
 		return localStorage.getItem("_id")
+	}
+
+	handleUpdate(postId: string) {
+		this.router.navigate([`/posts/${postId}/update`])
+	}
+
+	handleDelete() {
+		
 	}
 }

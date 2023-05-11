@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CreateComponent } from './components/create/create.component';
 import { CardComponent } from './components/card/card.component';
 import { DetailsComponent } from './components/details/details.component';
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DetailsComponent } from './components/details/details.component';
     HomeComponent,
     CreateComponent,
     CardComponent,
-    DetailsComponent
+    DetailsComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
