@@ -8,15 +8,17 @@ import { NgForm } from '@angular/forms';
 export class PostService {
 	constructor(private http: HttpClient) { }
 
-	createPost(formValue: NgForm) {
-		return this.http.post("http://localhost:3030/posts", formValue)
+	createPost(authorId: string, formValue: NgForm) {
+		const postData = { authorId, ...formValue}
+
+		return this.http.post("http://localhost:3030/posts", postData)
 	}
 
-	getPosts() {
+	readPosts() {
 		return this.http.get("http://localhost:3030/posts")
 	}
 
-	getPost(id: string) {
+	readPost(id: string) {
 		return this.http.get(`http://localhost:3030/posts/${id}`)
 	}
 }

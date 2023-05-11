@@ -18,8 +18,12 @@ export class DetailsComponent {
 	) {
 		this.id = this.route.snapshot.paramMap.get("id")
 
-		this.postService.getPost(this.id).pipe(take(1)).subscribe({
+		this.postService.readPost(this.id).pipe(take(1)).subscribe({
 			next: post => this.post = post
 		})
+	}
+
+	get userId() {
+		return localStorage.getItem("_id")
 	}
 }

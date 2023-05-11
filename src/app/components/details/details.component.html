@@ -1,9 +1,23 @@
-<div class="postWrapper">
-    <h1>
-        {{post?.content}}
-    </h1>
-    
-    <p>
-        {{post?.content}}
-    </p>
-</div>
+<section class="postSection">
+    <div class="postWrapper">
+        <h1>
+            {{post?.content}}
+        </h1>
+
+        <p>
+            {{post?.content}}
+        </p>
+
+        <div class="buttonsWrapper" *ngIf="post?.authorId !== userId">
+            <button>Like</button>
+            <button>Dislike</button>
+        </div>
+        
+        <div class="buttonsWrapper" *ngIf="post?.authorId === userId">
+            <button>Update</button>
+            <button>Delete</button>
+        </div>
+    </div>
+
+    <button>Comment</button>
+</section>

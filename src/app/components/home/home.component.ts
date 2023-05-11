@@ -13,7 +13,7 @@ export class HomeComponent {
 	constructor(
 		private postService: PostService,
 		private router: Router
-	) { this.posts$ = this.postService.getPosts() }
+	) { this.posts$ = this.postService.readPosts() }
 
 	handlePostCardClick(_id: any) {
 		this.router.navigate([`posts/${_id}`])

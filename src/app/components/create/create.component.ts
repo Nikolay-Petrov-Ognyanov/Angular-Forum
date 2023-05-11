@@ -12,11 +12,15 @@ import { PostService } from 'src/app/services/post.service';
 export class CreateComponent {
 	@ViewChild(NgForm, { static: true }) form!: ElementRef<HTMLInputElement>
 
-	constructor(private postService: PostService, private router: Router) {}
+	constructor(private postService: PostService, private router: Router) { }
+	
+	get userId() {
+		return localStorage.getItem("_id")
+	}
 
 	handleSave(form: NgForm) {
-		if (!form.invalid) {
-			this.postService.createPost(form.value).pipe(take(1)).subscribe({
+		if (this.userId && !form.invalid) {
+			this.postService.createPost(this.userId, form.value ).pipe(take(1)).subscribe({
 				next: () => this.router.navigate(["/posts"])
 			})
 		}

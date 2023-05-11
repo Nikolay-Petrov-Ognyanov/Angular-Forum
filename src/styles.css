@@ -57,7 +57,7 @@ select {
 }
 
 button {
-    width: 10vw;
+    width: 12vw;
     height: 3vw;
     background-color: black;
     color: greenyellow;
@@ -68,6 +68,7 @@ button {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    margin: 1vw 0;
 }
 
 button:hover {
@@ -79,8 +80,8 @@ button:hover {
 nav {
     display: flex;
     justify-content: space-between;
-    margin: 0.5vw calc((100vw - 20.5vw) / 2);
-    width: 20.5vw;
+    margin: 0 calc((100vw - 25vw) / 2);
+    width: 25vw;
 }
 
 form {
@@ -93,7 +94,7 @@ form {
 }
 
 input {
-    width: 20.5vw;
+    width: 25vw;
     height: 3vw;
     font-size: 2vw;
     border-radius: 1.5vw;
@@ -109,7 +110,7 @@ textarea {
     border-radius: 1.5vw;
     resize: none;
     background-color: black;
-    width: 20.5vw;
+    width: 25vw;
     outline: none;
     color: greenyellow;
     font-size: 2vw;
@@ -120,7 +121,7 @@ textarea {
 .buttonsWrapper {
     display: flex;
     justify-content: space-between;
-    width: 20.5vw;
+    width: 25vw;
 }
 
 section {
@@ -131,7 +132,7 @@ section {
 }
 
 .create {
-    width: 20.5vw;
+    width: 25vw;
 }
 
 .postCard {
@@ -150,4 +151,14 @@ section {
     cursor: pointer;
     background-color: greenyellow;
     color: black;
+}
+
+.postWrapper{
+    border: 0.25vw solid greenyellow;
+    width: 50vw;
+    border-radius: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
