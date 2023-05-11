@@ -29,11 +29,14 @@ export class UpdateComponent {
 	}
 
 	handleSave(form: NgForm) {
-		if (this.postId && !form.invalid) {
-			this.postService.updatePost(this.postId, form.value).pipe(take(1)).subscribe({
-				next: () => this.router.navigate(["/posts"])
-			})
+		let formValue = {
+			title: form.value.title.trim() || this.post.title,
+			content: form.value.content.trim() || this.post.content
 		}
+
+		this.postService.updatePost(this.postId, formValue).pipe(take(1)).subscribe({
+			next: () => this.router.navigate(["/posts"])
+		})
 	}
 
 	handleCancel() {

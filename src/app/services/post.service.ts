@@ -22,7 +22,7 @@ export class PostService {
 		return this.http.get(`http://localhost:3030/posts/${postId}`)
 	}
 
-	updatePost(postId: string, formValue: NgForm) {
+	updatePost(postId: string, formValue: any) {
 		return this.http.put(`http://localhost:3030/posts/${postId}`, formValue)
 	}
 
